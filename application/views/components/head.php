@@ -23,7 +23,7 @@
 
 <body>
     <!-- start navbar -->
-    <nav class="custom-navbar navbar navbar-expand-lg navbar-fixed navbar-transfarent">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <a class="navbar-brand m-0" href="index.html">
                 <img class="logo-white" src="<?=base_url()?>assets/images/logo-white.png" alt="">
