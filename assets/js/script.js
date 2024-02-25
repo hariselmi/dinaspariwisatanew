@@ -527,13 +527,13 @@ document.addEventListener('DOMContentLoaded', function () {
             updateIcon('light'); // Update the icon when switching to the light theme
             localStorage.setItem('theme', 'light'); // Store the theme preference in localStorage
             localStorage.setItem('mapStyle', 'light'); // Store the theme preference in localStorage
-            localStorage.setItem('imagePath', 'assets/images/lines.svg'); // Store the theme preference in localStorage
+            localStorage.setItem('imagePath', '../assets/images/lines.svg'); // Store the theme preference in localStorage
         } else {
             htmlElement.setAttribute('data-bs-theme', 'dark');
             updateIcon('dark'); // Update the icon when switching to the dark theme
             localStorage.setItem('theme', 'dark'); // Store the theme preference in localStorage
             localStorage.setItem('mapStyle', 'dark'); // Store the theme preference in localStorage
-            localStorage.setItem('imagePath', 'assets/images/lines-2.svg'); // Store the theme preference in localStorage
+            localStorage.setItem('imagePath', '../assets/images/lines-2.svg'); // Store the theme preference in localStorage
         }
     });
 
@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
     bgImageElements.forEach(function (bgImageElement) {
         // Check if the element with .js-bg-image-lines class exists
         if (bgImageElement) {
-            var currentImagePath = localStorage.getItem('imagePath') || 'assets/images/lines.svg';
+            var currentImagePath = localStorage.getItem('imagePath') || '../assets/images/lines.svg';
 
             // Set the initial background image
             bgImageElement.style.backgroundImage = 'url(' + currentImagePath + ')';
@@ -559,10 +559,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 var newImagePath;
 
                 // Toggle the image source path
-                if (currentImagePath === 'assets/images/lines.svg') {
-                    newImagePath = 'assets/images/lines-2.svg'; // Change this to the new path
+                if (currentImagePath === '../assets/images/lines.svg') {
+                    newImagePath = '../assets/images/lines-2.svg'; // Change this to the new path
                 } else {
-                    newImagePath = 'assets/images/lines.svg';
+                    newImagePath = '../assets/images/lines.svg';
                 }
 
                 // Update the data-image-src attribute

@@ -80,7 +80,7 @@ function initMap() {
     });
   }
 
-  var imagePathsBase = "assets/images/place/";
+  var imagePathsBase = "../assets/images/place/";
 
   // Check the direction attribute of the HTML element
   var dirAttribute = document.documentElement.getAttribute("dir");
@@ -119,7 +119,7 @@ function initMap() {
   });
 
   //preparing the image so it can be used as a marker
-  var iconBase = "assets/images/icon/";
+  var iconBase = "../assets/images/icon/";
 
   // Check the direction attribute of the HTML element
   var dirAttribute = document.documentElement.getAttribute("dir");

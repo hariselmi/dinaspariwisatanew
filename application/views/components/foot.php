@@ -131,6 +131,9 @@
     <script src="<?=base_url()?>assets/plugins/select2/select2.min.js"></script>
     <!-- Custom script for this template -->
     <script src="<?=base_url()?>assets/js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4iuUg1YDRIBRZ5e-jdssfqDuT9VLiOnY"></script>
+    <script src="<?=base_url()?>assets/js/listing-map.js"></script>
+
 </body>
 
 </html>
