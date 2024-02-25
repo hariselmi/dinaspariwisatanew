@@ -1,2 +1,0 @@
-# dinaspariwisatanew
-dinaspariwisatanew
