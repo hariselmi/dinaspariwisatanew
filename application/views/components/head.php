@@ -80,6 +80,11 @@
                         <a class="nav-link" href="<?=base_url()?>home/contact">Contact</a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>form">Pendataan Mandiri</a>
+                    </li>
+
+
                 </ul>
 
             </div>
