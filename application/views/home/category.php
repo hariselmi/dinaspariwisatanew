@@ -116,13 +116,14 @@
                     </div>
 
                     <?php 
-                    foreach ($q_category as $key => $value) { ?>
+                    foreach ($q_category as $key => $value) { 
+                        $count = $this->db->query("SELECT COUNT(nama) AS Jumlah FROM destination WHERE kategori_id = $value->id")->row()->Jumlah;
+
+                        ?>
 
                         <div class="form-check mb-2">
                         <input class="form-check-input" type="checkbox" value=" <?=$value->id?>   ">
-                        <label class="form-check-label" for="skillsOne"><?=$value->nama?><span class="count fs-13 ms-1 text-muted">(11)</span></label>
-
-                    </div>
+                        <label class="form-check-label" for="skillsOne"><?=$value->nama?><span class="count fs-13 ms-1 text-muted">(<?=$count?>)</span></label></div>
 
                     <?php }
                     ?> 
