@@ -32,6 +32,8 @@ class Home extends CI_Controller {
 	{
 		$data['title'] = 'Home';
 		$data['subview'] = 'home/category';
+		$data['q_location'] = $this->location_m->all();
+		$data['q_category'] = $this->category_m->all();
 		$this->load->view('components/layout', $data);
 	}
 

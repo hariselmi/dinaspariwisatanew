@@ -221,12 +221,13 @@
                     <!-- Start Search Select -->
                     <div class="search-select has-icon position-relative">
                         <select class="select2 form-select" aria-label="Default select example">
-                            <option selected>Select Location</option>
-                            <option value="1">It & Development</option>
-                            <option value="2">Web & Mobile Dev</option>
-                            <option value="3">Writing</option>
-                            <option value="4">Sales & Marketing</option>
-                            <option value="5">Music & Audio</option>
+                            
+                            <?php 
+                            foreach ($q_location as $key => $value) { ?>
+                                <option value="<?=$value->id?>"><?=$value->nama?></option>
+                            <?php }
+                            ?>
+                          
                         </select>
                         <svg class="form-icon-start position-absolute top-50 search-icon z-1 bi bi-geo-alt" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -239,12 +240,13 @@
                     <!-- Start Search Select -->
                     <div class="search-select has-icon position-relative">
                         <select class="select2 form-select" aria-label="Default select example">
-                            <option selected>All Categories</option>
-                            <option value="1">It & Development</option>
-                            <option value="2">Web & Mobile Dev</option>
-                            <option value="3">Writing</option>
-                            <option value="4">Sales & Marketing</option>
-                            <option value="5">Music & Audio</option>
+
+                            <?php 
+                            foreach ($q_category as $key => $value) { ?>
+                                <option value="<?=$value->id?>"><?=$value->nama?></option>
+                            <?php }
+                            ?>
+
                         </select>
                         <!-- <i class="fa-solid fa-sack-dollar fs-18 search-icon"></i> -->
                         <svg class="form-icon-start position-absolute top-50 search-icon z-1 bi bi-app-indicator" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
@@ -299,54 +301,19 @@
                         <h4 class="fs-5 fw-semibold mb-2">Categories</h4>
                         <p class="mb-0 small">Duis a leo sit amet odio volutpat auctor ut a lorem.</p>
                     </div>
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsOne">
-                        <label class="form-check-label" for="skillsOne">Eat & Drink<span class="count fs-13 ms-1 text-muted">(62)</span></label>
+
+                    <?php 
+                    foreach ($q_category as $key => $value) { ?>
+
+                        <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" value=" <?=$value->id?>   ">
+                        <label class="form-check-label" for="skillsOne"><?=$value->nama?><span class="count fs-13 ms-1 text-muted">(11)</span></label>
+
                     </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsTwo" checked>
-                        <label class="form-check-label" for="skillsTwo">Coaching<span class="count fs-13 ms-1 text-muted">(31)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsThree">
-                        <label class="form-check-label" for="skillsThree">Apartments<span class="count fs-13 ms-1 text-muted">(20)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsFour">
-                        <label class="form-check-label" for="skillsFour">Services<span class="count fs-13 ms-1 text-muted">(43)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsFive">
-                        <label class="form-check-label" for="skillsFive">Classifieds<span class="count fs-13 ms-1 text-muted">(16)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsSix">
-                        <label class="form-check-label" for="skillsSix">Fitness<span class="count fs-13 ms-1 text-muted">(22)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsSeven">
-                        <label class="form-check-label" for="skillsSeven">Events<span class="count fs-13 ms-1 text-muted">(21)</span></label>
-                    </div>
-                    <!-- End Form Check -->
-                    <!-- Start Form Check -->
-                    <div class="form-check mb-0">
-                        <input class="form-check-input" type="checkbox" value="" id="skillsEight">
-                        <label class="form-check-label" for="skillsEight">Other<span class="count fs-13 ms-1 text-muted">(17)</span></label>
-                    </div>
-                    <!-- End Form Check -->
+
+                    <?php }
+                    ?> 
+
                 </div>
                 <div class="mb-4 border-bottom pb-4">
                     <div class="mb-3">

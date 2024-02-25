@@ -15,17 +15,7 @@ class Home_m extends CI_Model {
      * @return  json(array)
      */
 
-public function get_gallery()
-    {
-        $query = $this->db->from('gallery g')
-                        ->select('g.*')
-                        
-                        ->order_by('id','DESC')
-                        ->limit('4')
-                        ->get();
 
-        return $query->result();
-    }
        
     
 
