@@ -1,66 +1,88 @@
-<!DOCTYPE html>
-<html class="app">
-    <head>
-        <title><?php echo $title; ?></title>
-        <meta charset="utf-8">
-		<meta content="ie=edge" http-equiv="x-ua-compatible">
-		<meta content="template language" name="keywords">
-		<meta content="John Doe" name="author">
-		<meta content="Admin Template" name="description">
-		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<link href="<?php echo base_url() . 'favicon.png'; ?>" rel="shortcut icon">
-		<link href="<?php echo base_url() . 'apple-touch-icon.png'; ?>" rel="apple-touch-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<!doctype html>
+<html lang="en">
 
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/tether/dist/css/tether.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/bootstrap/dist/css/bootstrap.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/font-awesome/css/font-awesome.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/batch-icons/style.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/dashicons/style.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/dripicons/webfont.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/eightyshades/style.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/foundation-icons/foundation-icons.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/metrize-icons/style.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/simple-line-icons/css/simple-line-icons.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/themify-icons/themify-icons.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/type-icons/style.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/weather-icons/css/weather-icons.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/animate/animate.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/fullcalendar/dist/fullcalendar.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/datatable/media/css/jquery.dataTables.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/datatable/media/css/dataTables.bootstrap4.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/dropzone/dist/dropzone.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/select2/dist/css/select2.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/bootstrap-daterangepicker/daterangepicker.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/fancybox/dist/jquery.fancybox.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/sweetalert/dist/sweetalert.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/exort/uploader.min.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/plugins/jquery-treegrid/jquery.treegrid.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/main.css'; ?>"/>
-        <link rel="stylesheet" href="<?php echo base_url() . 'assets/css/custom.css'; ?>"/>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="<?=base_url()?>assets/images/favicon.png">
+    <title>siParBud - Sistem Informasi Pariwisata dan Kebudayaan</title>
+    <link href="<?=base_url()?>assets/plugins/aos/aos.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/OwlCarousel2/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/OwlCarousel2/css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/jquery-fancyfileuploader/fancy-file-uploader/fancy_fileupload.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/ion.rangeSlider/ion.rangeSlider.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/select2/select2.min.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/plugins/select2-bootstrap-5/select2-bootstrap-5-theme.min.css" rel="stylesheet">
+    <!-- Custom style for this template -->
+    <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
+</head>
 
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/jquery/jquery-2.1.1.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/jquery-count-to/jquery.countTo.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/moment/min/moment.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/fullcalendar/dist/fullcalendar.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/chart.js/dist/Chart.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/ckeditor/ckeditor.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/datatable/media/js/jquery.dataTables.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/datatable/media/js/dataTables.bootstrap4.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/dropzone/dist/dropzone.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/select2/dist/js/select2.full.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/bootstrap-daterangepicker/daterangepicker.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/bootstrap-validator/dist/validator.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/fancybox/dist/jquery.fancybox.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/disabler-enabler/disabler.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/disabler-enabler/enabler.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/sweetalert/dist/sweetalert.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/super-datagrid/datagrid.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/exort/uploader.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/jquery-treegrid/jquery.treegrid.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/slimscroll/jquery.slimscroll.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/tether/dist/js/tether.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/plugins/bootstrap/dist/js/bootstrap.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo base_url() . 'assets/js/app.js'; ?>"></script>
-    </head>
-    <body>
+<body>
+    <!-- start navbar -->
+    <nav class="custom-navbar navbar navbar-expand-lg navbar-fixed navbar-transfarent">
+        <div class="container">
+            <a class="navbar-brand m-0" href="index.html">
+                <img class="logo-white" src="<?=base_url()?>assets/images/logo-white.png" alt="">
+                <img class="logo-dark" src="<?=base_url()?>assets/images/logo.png" alt="">
+            </a>
+            <div class="d-flex order-lg-2">
+                <!-- start button -->
+                <!-- end /. button -->
+                <!-- start button -->
+                <a href="sign-in.html" class="d-flex align-items-center justify-content-center p-0 btn-user" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Sign In">
+                    <i class="fa-solid fa-user-plus"></i>
+                </a>
+                <!-- end /. button -->
+                <!-- start button -->
+                <button type="button" id="themeToggleBtn" class="align-items-center bg-transparent border-0 btn-user d-flex justify-content-center p-0">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- end /. button -->
+                <!-- start button -->
+
+                <a href="add-listing.html" class="btn btn-primary d-none d-sm-flex fw-medium gap-2 hstack rounded-5">
+                    <i class="fa-solid fa-flag"></i>
+                    <div class="vr d-none d-sm-inline-block"></div>
+                    <span class="d-none d-sm-inline-block"> <b>English</b> | Bahasa | Korean</span>
+                </a>
+                <!-- end /. button -->
+                <!-- start navbar toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="nav-icon" class="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <!-- end /. navbar toggle button -->
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?=base_url()?>">Home</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>home/category">Category</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>home/maps">Maps</a>
+                    </li>
+
+                     <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>home/contact">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- end /. navbar -->
