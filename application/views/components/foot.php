@@ -134,6 +134,23 @@ Kec. Batam Kota, <br class="d-none d-xxl-block">Kota Batam, Kepulauan Riau 29432
             }
         });
     }
+
+    function insert_kategori(kategori_id) {
+
+        url = "<?=base_url()?>filter_kategori/setup";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {
+                kategori_id: kategori_id,
+            },
+            success: function(data) {
+
+            location.reload();
+                
+            }
+        });
+    }
 </script>
 </body>
 

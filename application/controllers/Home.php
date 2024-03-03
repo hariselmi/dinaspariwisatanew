@@ -25,6 +25,7 @@ class Home extends CI_Controller {
 		$data['subview'] = 'home/main';
 		$data['q_location'] = $this->location_m->all();
 		$data['q_category'] = $this->category_m->all();
+		$data['q_maps'] = $this->maps_m->all();
 		$this->load->view('components/layout', $data);
 	}
 
@@ -43,6 +44,7 @@ class Home extends CI_Controller {
 		$data['subview'] = 'home/category';
 		$data['q_location'] = $this->location_m->all();
 		$data['q_category'] = $this->category_m->all();
+		$data['q_maps'] = $this->maps_m->all();
 		$this->load->view('components/layout', $data);
 	}
 

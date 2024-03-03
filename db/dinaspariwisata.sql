@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 03/03/2024 12:30:02
+ Date: 03/03/2024 15:38:24
 */
 
 SET NAMES utf8mb4;
@@ -269,13 +269,14 @@ DROP TABLE IF EXISTS `destination`;
 CREATE TABLE `destination`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `nama` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `nama_n` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `nama_en` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `kategori_id` int NULL DEFAULT NULL,
   `created_at` datetime NULL DEFAULT NULL,
   `updated_at` datetime NULL DEFAULT NULL,
   `users_created` int NULL DEFAULT NULL,
   `users_updated` int NULL DEFAULT NULL,
   `softdelete` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0',
+  `map_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `name`(`nama` ASC) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
@@ -283,24 +284,8 @@ CREATE TABLE `destination`  (
 -- ----------------------------
 -- Records of destination
 -- ----------------------------
-INSERT INTO `destination` VALUES (1, 'Hotel', 'Hotel', 1, '2024-02-09 14:41:41', '2024-02-09 14:48:06', 1, 1, '0');
-INSERT INTO `destination` VALUES (2, 'Restaurant', 'Restaurant', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (3, 'Mall', 'Mall', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (4, 'Pantai', 'Beach', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (5, 'Wisata Sejarah', 'Historical Tourism', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (6, 'Wisata Budaya', 'Culture Tour', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (7, 'Wisata Religi', 'Religious Tourism', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (8, 'Rumah Makan', 'Restaurant', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (9, 'Kedai Kopi', 'Coffee Shop', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (10, 'Salon & Spa', 'Salon & Spa', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (11, 'Wisata Buatan', 'Artificial Tourism', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (12, 'Fitness', 'Fitness', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (13, 'Agro & Eco Wisata', 'Agro & Eco Tourism', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (14, 'Bioskop', 'Cinema', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (15, 'Bar', 'Bar', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (16, 'Diskotik', 'Discotheque', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (17, 'Wisata Jembatan', 'Bridge Tour', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
-INSERT INTO `destination` VALUES (18, 'Pelabuhan', 'Harbor', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
+INSERT INTO `destination` VALUES (1, 'Hotel Sahid', 'Sahid Hotel ', 1, '2024-02-09 14:41:41', '2024-02-09 14:48:06', 1, 1, '0', 1);
+INSERT INTO `destination` VALUES (2, 'Hotel Harris', 'HARRIS Hotel', 1, '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0', 2);
 
 -- ----------------------------
 -- Table structure for diskotik
@@ -350,6 +335,22 @@ CREATE TABLE `event`  (
 -- ----------------------------
 INSERT INTO `event` VALUES (1, '[{\"file_name\":\"1.jpeg\",\"file_size\":68394,\"file_type\":\"image/jpeg\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/event/1.jpeg\"}]', 'Harbor Bay', 'Lomba Fotografi', NULL, '2024-02-17', '<h2><strong><a href=\"https://kemahasiswaan.bsi.ac.id/event/2024/02/37/lomba-kreasi-kreativitas-dan-seni-online-jilid-ii.html\">Lomba KREASI (Kreativitas dan Seni) Online Jilid II</a></strong></h2>\r\n\r\n<p>PENDAFTARAN LOMBA KREASI (KREATIVITAS &amp; SENI) MAHASISWA JILID II<br />\r\n.<br />\r\nHai Sobat BSI.<br />\r\n.<br />\r\n.<br />\r\nBuat kamu yang punya bakat di bidang seni, dan kreatifitas.<br />\r\n<br />\r\nPusat Prestasi Kemahasiswaan Universitas Bina Sarana Informatika, menggelar lomba KREASI (Kreativitas &amp; Seni ) Mahasiswa Jilid II Secara Online ,Kategori Perlombaan seni dan Kreativitas yang bisa diikuti:<br />\r\n<br />\r\n1. Lomba Menyanyi POP (Putra/Putri)<br />\r\n2. Lomba menyanyi Dangdut (Putra/Putri)<br />\r\n3. Lomba Menyanyi Lagu seriosa<br />\r\n4. Lomba Menyanyi Lagu Keroncong<br />\r\n5. Lomba Vocal Group<br />\r\n6. Lomba Baca Puisi<br />\r\n7. Lomba Seni Tari<br />\r\n8. Lomba Monolog<br />\r\n9. Lomba Desain Poster<br />\r\n10. Lomba Seni Lukis<br />\r\n11. Lomba Komik Strip<br />\r\n12. Lomba Penulis Cerpen<br />\r\n13. Lomba Menulis Puisi<br />\r\n14. Lomba Menulis Lakon<br />\r\n15. Lomba Fotografi (Realita dan kreatif)<br />\r\n<br />\r\nPersyaratan Umum<br />\r\n- Pria/Wanita<br />\r\n- Mahasiswa Aktif Universitas Bina Sarana Informatika<br />\r\n- Usia Max : 25 Tahun (31 Oktober 2021)<br />\r\n<br />\r\n* Link Pendaftaran dan pengiriman: https://bit.ly/sosialisasikreasi2021<br />\r\n<br />\r\nTanggal Penting:<br />\r\n&gt; Sosialisasi Teknis Lomba : 1 April 2021<br />\r\n&gt; Batas akhir Pendaftaran :09-16 April 2021<br />\r\n&gt; Pengiriman Karya: 19 - 24 April 2021<br />\r\n&gt; Penilaian Karya oleh dewan Juri : 26 - 30 April 2021<br />\r\n&gt; Pengumuman Pemenang : 1 Mei 2021<br />\r\n<br />\r\n*Contact Person: +6283104591869<br />\r\n<br />\r\nSetiap Peserta yang menjadi juara, akan mewakili Universitas Bina Sarana Informatika dalam ajang Lomba PEKSIMINAS (Pekan Seni Mahasiswa Tingkat Nasional) Tahun 2021. Untuk bersaing dengan wakil dari Universitas Lain di Indonesia.<br />\r\n<br />\r\nYuk beraksi, berkreasi dan tunjukan bakat seni mu.</p>\r\n');
 INSERT INTO `event` VALUES (3, '[]', '1', '1', '1', '2024-01-20', '<p>1</p>\r\n');
+
+-- ----------------------------
+-- Table structure for filter_kategori
+-- ----------------------------
+DROP TABLE IF EXISTS `filter_kategori`;
+CREATE TABLE `filter_kategori`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `kategori_id` int NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of filter_kategori
+-- ----------------------------
+INSERT INTO `filter_kategori` VALUES (6, 1);
+INSERT INTO `filter_kategori` VALUES (7, 2);
 
 -- ----------------------------
 -- Table structure for fitness
@@ -444,12 +445,14 @@ CREATE TABLE `hotel`  (
   `lama_menginap` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
   `rata_ocupansi` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
   `tahun_berdiri` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `map_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of hotel
 -- ----------------------------
+INSERT INTO `hotel` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1);
 
 -- ----------------------------
 -- Table structure for kedai_kopi
@@ -620,6 +623,26 @@ CREATE TABLE `mall`  (
 -- ----------------------------
 -- Records of mall
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for maps
+-- ----------------------------
+DROP TABLE IF EXISTS `maps`;
+CREATE TABLE `maps`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_lokasi` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_tempat` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `latitude` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `longitude` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `img` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of maps
+-- ----------------------------
+INSERT INTO `maps` VALUES (1, 'Hotel Sahid', 'Batam Kota', '1.133203', '104.0221696', '1');
+INSERT INTO `maps` VALUES (2, 'Hotel HARRIS', 'Batam Kota', '1.1446097', '103.9241437', '2');
 
 -- ----------------------------
 -- Table structure for menus
