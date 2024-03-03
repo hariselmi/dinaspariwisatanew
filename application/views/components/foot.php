@@ -134,6 +134,27 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4iuUg1YDRIBRZ5e-jdssfqDuT9VLiOnY"></script>
     <script src="<?=base_url()?>assets/js/listing-map.js"></script>
 
+
+
+    <script type="text/javascript">
+
+    function change_language(language_id) {
+
+        url = "<?=base_url()?>language/setup";
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: {
+                language_id: language_id,
+            },
+            success: function(data) {
+
+            location.reload();
+                
+            }
+        });
+    }
+</script>
 </body>
 
 </html>

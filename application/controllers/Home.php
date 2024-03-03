@@ -4,15 +4,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	/**
-     * Login Form
+     * Dashboard
      *
-     * @access 	public
-     * @param 	
-     * @return 	view
+     * @access  public
+     * @param   
+     * @return  view
      */
-	
+	public function __construct()
+    {
+        parent::__construct();
+        
+        $this->load->language('siparbud', $this->session->userdata('language'));
+		
+    }
+
 	public function index()
-	{
+	{	
+		$this->session->userdata('language');
 		$data['title'] = 'Home';
 		$data['subview'] = 'home/main';
 		$data['q_location'] = $this->location_m->all();

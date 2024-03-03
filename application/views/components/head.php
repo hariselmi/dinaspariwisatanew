@@ -44,10 +44,13 @@
                 <!-- end /. button -->
                 <!-- start button -->
 
-                <a href="add-listing.html" class="btn btn-primary d-none d-sm-flex fw-medium gap-2 hstack rounded-5">
+                <a href="#" class="btn btn-primary d-none d-sm-flex fw-medium gap-2 hstack rounded-5">
                     <i class="fa-solid fa-flag"></i>
                     <div class="vr d-none d-sm-inline-block"></div>
-                    <span class="d-none d-sm-inline-block"> <b>English</b> | Bahasa | Korean</span>
+                    <span class="d-none d-sm-inline-block"> 
+                        <span onclick="change_language(1)"> English </span>| 
+                        <span onclick="change_language(2)"> Bahasa </span>| 
+                        <span onclick="change_language(3)"> Korean </span> </span>
                 </a>
                 <!-- end /. button -->
                 <!-- start navbar toggle button -->
@@ -64,7 +67,7 @@
                 <ul class="navbar-nav m-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?=base_url()?>">Home</a>
+                        <a class="nav-link active" href="<?=base_url()?>"><?=$this->lang->line('menu_1')?></a>
                     </li>
 
                      <li class="nav-item">
