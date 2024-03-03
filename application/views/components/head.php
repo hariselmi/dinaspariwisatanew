@@ -25,7 +25,7 @@
     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <a class="navbar-brand m-0" href="index.html">
+            <a class="navbar-brand m-0" href="<?=base_url()?>">
                 <img class="logo-white" src="<?=base_url()?>assets/images/logo-white.png" alt="">
                 <img class="logo-dark" src="<?=base_url()?>assets/images/logo.png" alt="">
             </a>
@@ -71,20 +71,20 @@
                     </li>
 
                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url()?>home/category">Category</a>
+                        <a class="nav-link" href="<?=base_url()?>home/category"><?=$this->lang->line('menu_2')?></a>
                     </li>
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url()?>home/maps">Maps</a>
+                        <a class="nav-link" href="<?=base_url()?>home/maps"><?=$this->lang->line('menu_3')?></a>
                     </li>
 
                      <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url()?>home/contact">Contact</a>
+                        <a class="nav-link" href="<?=base_url()?>home/contact"><?=$this->lang->line('menu_4')?></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?=base_url()?>form">Pendataan Mandiri</a>
+                        <a class="nav-link" href="<?=base_url()?>form"><?=$this->lang->line('menu_5')?></a>
                     </li>
 
 
