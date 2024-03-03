@@ -78,7 +78,7 @@ Kec. Batam Kota, <br class="d-none d-xxl-block">Kota Batam, Kepulauan Riau 29432
                 <div class="col-lg order-md-first">
                     <div class="align-items-center row">
                         <!-- start footer logo -->
-                        <a href="index.html" class="col-sm-auto footer-logo mb-2 mb-sm-0">
+                        <a href="<?=base_url()?>" class="col-sm-auto footer-logo mb-2 mb-sm-0">
                             <img src="<?=base_url()?>assets/images/logo-white.png" alt="">
                         </a>
                         <!-- end /. footer logo -->

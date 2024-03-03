@@ -35,7 +35,7 @@
                             <?php
                             foreach ($q_location as $key => $value) {  ?>  
                                     
-                                <option value="<?$value->id?>"><?=$value->nama?></option>                             
+                                <option value="<?$value->id?>">&nbsp;<?=$value->nama?></option>                             
 
                             <?php    }  ?>  
                                 
@@ -70,127 +70,41 @@
                     <!-- end /. section header -->
                 </div>
             </div>
+
             <div class="row g-3 g-ld-4">
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-building-user"></i>
+                    <?php 
+                    foreach ($q_category as $key => $value) { 
+                        $count = $this->db->query("SELECT COUNT(nama) AS Jumlah FROM destination WHERE kategori_id = $value->id")->row()->Jumlah;
+
+                        ?>
+
+
+                            <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
+                                <!-- start category -->
+                                <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
+                                    <div class="flex-shrink-0">
+                                        <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
+                                            <i class="fa-solid fa-building-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1 ms-2 ms-md-3">
+                                        <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html"><?=$value->nama?></a></h3>
+                                        <p class="mb-0 small"><?=$count?> listings</p>
+                                    </div>
+                                    <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <!-- end /. category -->
                             </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">Appartment</a></h3>
-                            <p class="mb-0 small">99+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-utensils"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">Restaurant</a></h3>
-                            <p class="mb-0 small">55+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-headphones"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">Music</a></h3>
-                            <p class="mb-0 small">55+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-bag-shopping"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">Shopping</a></h3>
-                            <p class="mb-0 small">80+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-tv"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">TV Shows</a></h3>
-                            <p class="mb-0 small">96+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
-                    <!-- start category -->
-                    <div class="align-items-center bg-blur border-0 card-hover d-flex flex-fill flex-wrap p-3 p-sm-3 rounded-4 shadow-sm w-100">
-                        <div class="flex-shrink-0">
-                            <div class="align-items-center bg-dark category-icon-box d-flex fs-4 justify-content-center rounded-3 text-primary">
-                                <i class="fa-solid fa-dumbbell"></i>
-                            </div>
-                        </div>
-                        <div class="flex-grow-1 ms-2 ms-md-3">
-                            <h3 class="fs-19 fw-semibold mb-1"><a href="listings-map-grid-1.html">Gymnasiums</a></h3>
-                            <p class="mb-0 small">21+ listings</p>
-                        </div>
-                        <a href="listings-map-grid-1.html" class="align-items-center d-flex fw-semibold gap-2 link-hover">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <!-- end /. category -->
-                </div>
+
+
+                    <?php }
+                    ?> 
+
+
             </div>
         </div>
     </div>

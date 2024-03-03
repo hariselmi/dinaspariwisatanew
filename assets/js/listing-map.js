@@ -9,7 +9,7 @@ function initMap() {
     // zoom: 11,
 
     // The latitude and longitude to center the map (always required)
-    // center: new google.maps.LatLng(40.6700, -73.9400), // New York
+      center: new google.maps.LatLng(0.8378389,103.7234274), // Batam
 
     // How you would like to style the map. 
     // This is where you would paste any style found on Snazzy Maps.
@@ -64,12 +64,12 @@ function initMap() {
 
   // Multiple markers location, latitude, and longitude
   var markers = [
-    ['Hoboken, NJ, USA', 40.743992, -74.032364],
-    ['Long Island City, Queens, NY, USA', 40.744678, -73.948540],
-    ['Midwood, Brooklyn, NY, USA', 40.622581, -73.962799],
-    ['Brooklyn Childrens Museum, museum, New York, United States', 40.67439655, -73.94404613465176],
-    ['South Slope, neighbourhood, New York, United States', 40.6604004, -73.9944088],
-    ['NewYork-Presbyterian Brooklyn Methodist Hospital, hospital, New York, United States', 40.667825449999995, -73.97914371327701]
+    ['Batam Kota, Kota Batam, Indonesia', 1.133203,104.0221696],
+    ['Batam Kota, Kota Batam, Indonesia', 1.1231152,104.0490358],
+    ['Batam Kota, Kota Batam, Indonesia', 1.1446097,103.9241437],
+    ['Lubuk Baja, Kota Batam, Indonesia', 1.1443749,103.9962475],
+    ['Lubuk Baja, Kota Batam, Indonesia', 1.1336589,103.9889675],
+    ['Batam Kota, Kota Batam, Indonesia', 1.1332084,104.0376191]
   ];
 
   // Initialize Bootstrap 5 tooltips
@@ -99,12 +99,12 @@ function initMap() {
   ];
 
   var cardTitle = [
-    `Green Mart Apartment`,
-    `Chuijhal Hotel And Restaurant`,
-    `The Barber's Lounge`,
-    `Gaming Expo Spectacle`,
-    `Burnowl Tours & Travels `,
-    `Exclusive Education Aid `,
+    `Hotel Sahid`,
+    `Blitz Hotel`,
+    `Harris Hotel`,
+    `Aston`,
+    `favehotel`,
+    `Hotel Sahid`
   ];
 
   // Info window content
