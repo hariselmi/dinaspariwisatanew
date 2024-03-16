@@ -123,7 +123,7 @@
                         ?>
 
                         <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" value=" <?=$value->id?>" <?=$checked?> onclick="insert_kategori(<?=$value->id?>)">
+                        <input class="form-check-input" type="checkbox" value=" <?=$value->id?>" <?=$checked?>  onclick="insert_kategori(<?=$value->id?>)">
                         <label class="form-check-label" for="skillsOne"><?=$value->nama?><span  class="count fs-13 ms-1 text-muted">(<?=$count?>)</span></label></div>
 
                     <?php }

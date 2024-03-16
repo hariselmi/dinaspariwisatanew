@@ -11,7 +11,7 @@
  Target Server Version : 100427 (10.4.27-MariaDB)
  File Encoding         : 65001
 
- Date: 03/03/2024 15:38:24
+ Date: 16/03/2024 14:53:49
 */
 
 SET NAMES utf8mb4;
@@ -118,7 +118,7 @@ CREATE TABLE `category`  (
   `softdelete` enum('0','1') CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT '0',
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `name`(`nama` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 20 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of category
@@ -141,6 +141,7 @@ INSERT INTO `category` VALUES (15, 'Bar', 'bar', '1', '[{\"file_name\":\"bg_dest
 INSERT INTO `category` VALUES (16, 'Diskotik', 'diskotik', '1', '[{\"file_name\":\"bg_destinasi.png\",\"file_size\":47.43,\"file_type\":\"image/png\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/kategori/bg_destinasi.png\"}]', '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
 INSERT INTO `category` VALUES (17, 'Wisata Jembatan', 'wisata_jembatan', '1', '[{\"file_name\":\"bg_destinasi.png\",\"file_size\":47.43,\"file_type\":\"image/png\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/kategori/bg_destinasi.png\"}]', '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
 INSERT INTO `category` VALUES (18, 'Pelabuhan', 'pelabuhan', '1', '[{\"file_name\":\"bg_destinasi.png\",\"file_size\":47.43,\"file_type\":\"image/png\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/kategori/bg_destinasi.png\"}]', '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
+INSERT INTO `category` VALUES (20, 'Gelper', 'gelper', '1', '[{\"file_name\":\"bg_destinasi.png\",\"file_size\":47.43,\"file_type\":\"image/png\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/kategori/bg_destinasi.png\"}]', '2024-02-09 14:41:41', '2024-02-09 14:41:41', 1, 1, '0');
 
 -- ----------------------------
 -- Table structure for ci_sessions
@@ -344,13 +345,13 @@ CREATE TABLE `filter_kategori`  (
   `id` int NOT NULL AUTO_INCREMENT,
   `kategori_id` int NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of filter_kategori
 -- ----------------------------
-INSERT INTO `filter_kategori` VALUES (6, 1);
-INSERT INTO `filter_kategori` VALUES (7, 2);
+INSERT INTO `filter_kategori` VALUES (12, 2);
+INSERT INTO `filter_kategori` VALUES (13, 8);
 
 -- ----------------------------
 -- Table structure for fitness
@@ -401,6 +402,44 @@ CREATE TABLE `gallery`  (
 INSERT INTO `gallery` VALUES (1, '[{\"file_name\":\"1.jpeg\",\"file_size\":68394,\"file_type\":\"image/jpeg\",\"file_thumbnail\":\"http://localhost/dinaspariwisata/upload/gallery/1.jpeg\"}]', 'a', 'a', 'a', '2024-02-14', '<p>aaa</p>\r\n');
 
 -- ----------------------------
+-- Table structure for gelper
+-- ----------------------------
+DROP TABLE IF EXISTS `gelper`;
+CREATE TABLE `gelper`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nama_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_perusahaan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `alamat` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `penanggung_jawab` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nib` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `resiko_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sls` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sertifikat_standar_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `terverifikasi_persyaratan_khusus` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_laki_laki` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_perempuan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_informasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_bebas_asap_rokok` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `apar` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `p3k` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `penerapan_k3` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `fasilitas` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `trainer_sertifikasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `pengunjung_per_bulan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `persetujuan_melengkapi_kekurangan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `tanggal_pengisian` date NULL DEFAULT NULL,
+  `nama_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `ttd_pengisi` text CHARACTER SET utf32 COLLATE utf32_general_ci NULL,
+  `telepon_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of gelper
+-- ----------------------------
+INSERT INTO `gelper` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL);
+
+-- ----------------------------
 -- Table structure for groups
 -- ----------------------------
 DROP TABLE IF EXISTS `groups`;
@@ -430,29 +469,33 @@ INSERT INTO `groups` VALUES (1, 'Administrator', 'Yes', 'Yes', 'Yes', 'Yes', '20
 DROP TABLE IF EXISTS `hotel`;
 CREATE TABLE `hotel`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama_perusahaan` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `penanggung_jawab` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jabatan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_usaha` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `klasifikasi_hotel` varchar(5) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `alamat` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `no_telp` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_kamar` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_kamar` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `fasilitas` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_karyawan` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `lama_menginap` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `rata_ocupansi` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `tahun_berdiri` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `map_id` int NULL DEFAULT NULL,
+  `nama_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_perusahaan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `alamat` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `penanggung_jawab` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nib` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `resiko_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sls` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sertifikat_standar_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_kamar` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_laki_laki` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_perempuan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `pengunjung_per_bulan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `fasilitas` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_informasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `persetujuan_melengkapi_kekurangan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `tanggal_pengisian` date NULL DEFAULT NULL,
+  `nama_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `ttd_pengisi` text CHARACTER SET utf32 COLLATE utf32_general_ci NULL,
+  `telepon_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of hotel
 -- ----------------------------
-INSERT INTO `hotel` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1);
+INSERT INTO `hotel` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for kedai_kopi
@@ -827,21 +870,29 @@ INSERT INTO `properti` VALUES (5, 'Vihara Duta Maitreya', 'Batam', 7, 1, '0');
 DROP TABLE IF EXISTS `restoran`;
 CREATE TABLE `restoran`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama_perusahaan` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `penanggung_jawab` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jabatan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_usaha` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `klasifikasi_hotel` varchar(5) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `alamat` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `no_telp` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_kamar` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_kamar` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `fasilitas` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_karyawan` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `lama_menginap` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `rata_ocupansi` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `tahun_berdiri` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_perusahaan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `alamat` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `penanggung_jawab` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nib` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `resiko_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `slhs` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sertifikat_standar_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `kelompok_jasa` enum('-','Bar','Kafe','Rumah Makan','Restoran') CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_laki_laki` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_perempuan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `ragam_menu` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `pengunjung_per_bulan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah meja` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah kursi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_informasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_bebas_asap_rokok` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `fasilitas` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `persetujuan_melengkapi_kekurangan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `tanggal_pengisian` date NULL DEFAULT NULL,
+  `nama_pengisi` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `ttd_pengisi` text CHARACTER SET utf32 COLLATE utf32_general_ci NULL,
+  `telepon_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
 
@@ -883,27 +934,33 @@ CREATE TABLE `rumah_makan`  (
 DROP TABLE IF EXISTS `salon_spa`;
 CREATE TABLE `salon_spa`  (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama_perusahaan` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `penanggung_jawab` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jabatan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_usaha` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `klasifikasi_hotel` varchar(5) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `alamat` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `no_telp` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_kamar` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jenis_kamar` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `fasilitas` varchar(255) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `jumlah_karyawan` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `lama_menginap` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `rata_ocupansi` varchar(50) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
-  `tahun_berdiri` varchar(11) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nama_perusahaan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `alamat` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `penanggung_jawab` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `nib` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sertifikat_standar_usaha` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `sls` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_laki_laki` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_tenaga_perempuan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `brosur_spa_massage` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `jumlah_terapis_sertifikasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `pengunjung_per_bulan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `fasilitas` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `standing_banner_informasi` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `persetujuan_melengkapi_kekurangan` varchar(100) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `tanggal_pengisian` date NULL DEFAULT NULL,
+  `nama_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
+  `ttd_pengisi` text CHARACTER SET utf32 COLLATE utf32_general_ci NULL,
+  `telepon_pengisi` varchar(30) CHARACTER SET utf32 COLLATE utf32_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf32 COLLATE = utf32_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of salon_spa
 -- ----------------------------
+INSERT INTO `salon_spa` VALUES (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1', NULL, NULL);
 
 -- ----------------------------
 -- Table structure for settings

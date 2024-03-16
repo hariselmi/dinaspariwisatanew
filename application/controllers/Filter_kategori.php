@@ -38,7 +38,7 @@ class Filter_kategori extends CI_Controller {
 			$this->db->delete('filter_kategori');
 		 }
 		 else {
-		 	$data['kategori_id']		    		= $kategori_id;
+		 	$data['kategori_id']		  = $kategori_id;
 			$this->db->insert('filter_kategori', $data);
 		 }
 		 
