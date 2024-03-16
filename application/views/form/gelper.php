@@ -6,9 +6,9 @@
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-5">
-                    <form id="form-salon_spa">
+                    <form id="form-gelper">
                     <input hidden type="text" name="id" class="hidden">
-                    <h3 class="h1 mb-4 font-caveat text-primary">Salon & Spa</h3>
+                    <h3 class="h1 mb-4 font-caveat text-primary">Gelper</h3>
                     <!-- Start Form Group -->
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Nama Usaha</label>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Nama Pengusaha/Penanggung Jawab</label>
-                            <input class="form-control" name="penanggung_jawab" placeholder="Nama Pengusaha/Penanggung Jawab" type="text" required="">
+                            <input class="form-control" name="penanggung_jawab" placeholder="Penanggung Jawab" type="text" required="">
                             <div class="validation-message" data-field="penanggung_jawab"></div>
                     </div>
                     <div class="mb-4">
@@ -36,14 +36,24 @@
                             <div class="validation-message" data-field="nib"></div>
                     </div>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Sertifikat Standar Usaha</label>
-                            <input class="form-control" name="sertifikat_standar_usaha" placeholder="Sertifikat Standar Usaha" type="text" required="">
-                            <div class="validation-message" data-field="sertifikat_standar_usaha"></div>
+                            <label class="required fw-medium mb-2">Resiko Usaha</label>
+                            <input class="form-control" name="resiko_usaha" placeholder="Resiko Usaha" type="text" required="">
+                            <div class="validation-message" data-field="resiko_usaha"></div>
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Sertifikasi Laik Sehat</label>
                             <input class="form-control" name="sls" placeholder="Sertifikasi Laik Sehat" type="text" required="">
                             <div class="validation-message" data-field="sls"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Sertifikat Standar Usaha</label>
+                            <input class="form-control" name="sertifikat_standar_usaha" placeholder="Sertifikat Standar Usaha" type="text" required="">
+                            <div class="validation-message" data-field="sertifikat_standar_usaha"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Terverifikasi Persyaratan Khusus</label>
+                            <input class="form-control" name="terverifikasi_persyaratan_khusus" placeholder="Terverifikasi Persyaratan Khusus" type="text" required="">
+                            <div class="validation-message" data-field="terverifikasi_persyaratan_khusus"></div>
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Jumlah Tenaga Kerja Laki-Laki</label>
@@ -55,24 +65,35 @@
                             <input class="form-control" name="jumlah_tenaga_perempuan" placeholder="Jumlah Tenaga Kerja Perempuan" type="text" required="">
                             <div class="validation-message" data-field="jumlah_tenaga_perempuan"></div>
                     </div>
+                    
                 </div>
 <!-------------------------------------------------------------------------------------------- -->
                 <div class="col-md-6 col-xl-5">
 <br>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Brosur SPA / Massage / Panti Pijat</label>
-                            <input class="form-control" name="brosur_spa_massage" placeholder="Brosur SPA / Massage / Panti Pijat" type="text" required="">
-                            <div class="validation-message" data-field="brosur_spa_massage"></div>
+                            <label class="required fw-medium mb-2">Standing Banner Informasi</label>
+                            <input class="form-control" name="standing_banner_informasi" placeholder="Standing Banner Informasi" type="text" required="">
+                            <div class="validation-message" data-field="standing_banner_informasi"></div>
                     </div>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Terapis yang Memiliki Sertifikasi</label>
-                            <input class="form-control" name="jumlah_terapis_sertifikasi" placeholder="Terapis yang Memiliki Sertifikasi" type="text" required="">
-                            <div class="validation-message" data-field="jumlah_terapis_sertifikasi"></div>
+                            <label class="required fw-medium mb-2">Standing Banner/Spanduk Area Bebas Asap Rokok</label>
+                            <input class="form-control" name="standing_banner_bebas_asap_rokoks" placeholder="Standing Banner/Spanduk Area Bebas Asap Rokok" type="text" required="">
+                            <div class="validation-message" data-field="standing_banner_bebas_asap_rokoks"></div>
                     </div>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Jumlah Pengunjung Per Bulan</label>
-                            <input class="form-control" name="pengunjung_per_bulan" placeholder="Jumlah Pengunjung Per Bulan" type="text" required="">
-                            <div class="validation-message" data-field="pengunjung_per_bulan"></div>
+                            <label class="required fw-medium mb-2">Apar(Alat Pemadam Api Ringan)</label>
+                            <input class="form-control" name="apar" placeholder="Apar(Alat Pemadam Api Ringan)" type="text" required="">
+                            <div class="validation-message" data-field="apar"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">P3K(Pertolongan Pertama pada Kecelakaan</label>
+                            <input class="form-control" name="p3k" placeholder="P3K(Pertolongan Pertama pada Kecelakaan" type="text" required="">
+                            <div class="validation-message" data-field="p3k"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Penerapan K3</label>
+                            <input class="form-control" name="penerapan_k3" placeholder="Penerapan K3" type="text" required="">
+                            <div class="validation-message" data-field="penerapan_k3"></div>
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Fasilitas</label>
@@ -80,14 +101,14 @@
                             <div class="validation-message" data-field="fasilitas"></div>
                     </div>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Standing</label>
-                            <input class="form-control" name="standing" placeholder="Standing" type="text" required="">
-                            <div class="validation-message" data-field="standing"></div>
+                            <label class="required fw-medium mb-2">Trainer yang memiliki Sertifikasi</label>
+                            <input class="form-control" name="trainer_sertifikasi" placeholder="Trainer yang memiliki Sertifikasi" type="text" required="">
+                            <div class="validation-message" data-field="trainer_sertifikasi"></div>
                     </div>
                     <div class="mb-4">
-                            <label class="required fw-medium mb-2">Standing Banner Informasi</label>
-                            <input class="form-control" name="standing_banner_informasi" placeholder="Standing Banner Informasi" type="text" required="">
-                            <div class="validation-message" data-field="standing_banner_informasi"></div>
+                            <label class="required fw-medium mb-2">Jumlah Pengunjung Per Bulan</label>
+                            <input class="form-control" name="pengunjung_per_bulan" placeholder="Jumlah Pengunjung Per Bulan" type="text" required="">
+                            <div class="validation-message" data-field="pengunjung_per_bulan"></div>
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Menyetujui Melengkapi Kekurangan dari Standarisasi Usaha</label>
@@ -125,7 +146,7 @@
                     </div>
                     
                     
-                    <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_salon_spa">Send</button>
+                    <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_gelper">Send</button>
                     </form>
                     
                     <!-- /.End Submit Button -->
@@ -138,23 +159,23 @@
 <script type="text/javascript">
 
 
-    $('#save_salon_spa').on("click", function() {
+    $('#save_gelper').on("click", function() {
         login();
     });
-    $("#form-hotel").keypress(function(event) {
+    $("#form-gelper").keypress(function(event) {
         if (event.which == 13) {
             login();
         }
     });
 
     function login() {
-        $('#save_salon_spa').html("Authenticating...").attr('disabled', true);
-        var data = $('#form-hotel').serialize();
-        $.post("<?php echo base_url() . 'validate/validate_hotel'; ?>", data).done(function(data) {
+        $('#save_gelper').html("Authenticating...").attr('disabled', true);
+        var data = $('#form-gelper').serialize();
+        $.post("<?php echo base_url() . 'validate/validate_gelper'; ?>", data).done(function(data) {
             if (data.status == "success") {
                 location.reload();
             } else {
-                $('#save_salon_spa').html("Login").attr('disabled', false);
+                $('#save_gelper').html("Login").attr('disabled', false);
                 $('.validation-message').html('');
                 $('.validation-message').each(function() {
                     for (var key in data) {

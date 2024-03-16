@@ -1,97 +1,169 @@
 
 
+
+
     <div class="py-5 bg-light mx-3 rounded-4 my-3">
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-5">
-                    <form>
+                    <form id="form-hotel">
+                    <input hidden type="text" name="id" class="hidden">
                     <h3 class="h1 mb-4 font-caveat text-primary">Hotel</h3>
                     <!-- Start Form Group -->
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Company Name</label>
-                        <input type="text" class="form-control" name="nama_perusahaan" id="" placeholder="PT. 123" required="">
+                            <label class="required fw-medium mb-2">Nama Usaha</label>
+                            <input class="form-control" name="nama_usaha" placeholder="Nama Usaha" type="text" required="">
+                            <div class="validation-message" data-field="nama_usaha"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Person In Charge</label>
-                        <input type="text" class="form-control" name="penanggung_jawab" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Nama Perusahaan</label>
+                            <input class="form-control" name="nama_perusahaan" placeholder="Nama Perusahaan" type="text" required="">
+                            <div class="validation-message" data-field="nama_perusahaan"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Position</label>
-                        <input type="text" class="form-control" name="jabatan" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Alamat</label>
+                            <input class="form-control" name="alamat" placeholder="Alamat" type="text" required="">
+                            <div class="validation-message" data-field="alamat"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Type of Business</label>
-                        <input type="text" class="form-control" name="jenis_usaha" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Nama Pengusaha/Penanggung Jawab</label>
+                            <input class="form-control" name="penanggung_jawab" placeholder="Penanggung Jawab" type="text" required="">
+                            <div class="validation-message" data-field="penanggung_jawab"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Hotel Classification</label>
-                        <input type="text" class="form-control" name="klasifikasi_hotel" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Nomor Perizinan(NIB)</label>
+                            <input class="form-control" name="nib" placeholder="Nomor Perizinan" type="text" required="">
+                            <div class="validation-message" data-field="nib"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Address</label>
-                        <textarea class="form-control" rows="3" name="alamat"></textarea>
+                            <label class="required fw-medium mb-2">Resiko Usaha</label>
+                            <input class="form-control" name="resiko_usaha" placeholder="Resiko Usaha" type="text" required="">
+                            <div class="validation-message" data-field="resiko_usaha"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Phone</label>
-                        <input type="text" class="form-control" name="no_telp" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Sertifikasi Laik Sehat</label>
+                            <input class="form-control" name="sls" placeholder="Sertifikasi Laik Sehat" type="text" required="">
+                            <div class="validation-message" data-field="sls"></div>
                     </div>
                     <div class="mb-4">
-                        <label class="required fw-medium mb-2">Email</label>
-                        <input type="email" class="form-control" name="email" id="" placeholder="">
+                            <label class="required fw-medium mb-2">Sertifikat Standar Usaha</label>
+                            <input class="form-control" name="sertifikat_standar_usaha" placeholder="Sertifikat Standar Usaha" type="text" required="">
+                            <div class="validation-message" data-field="sertifikat_standar_usaha"></div>
                     </div>
-                    
- 
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Jumlah Kamar</label>
+                            <input class="form-control" name="jumlah_kamar" placeholder="Jumlah Kamar" type="text" required="">
+                            <div class="validation-message" data-field="jumlah_kamar"></div>
+                    </div>
                 </div>
+<!-------------------------------------------------------------------------------------------- -->
                 <div class="col-md-6 col-xl-5">
 <br>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Jumlah Tenaga Kerja Laki-Laki</label>
+                            <input class="form-control" name="jumlah_tenaga_laki_laki" placeholder="Jumlah Tenaga Kerja Laki-Laki" type="text" required="">
+                            <div class="validation-message" data-field="jumlah_tenaga_laki_laki"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Jumlah Tenaga Kerja Perempuan</label>
+                            <input class="form-control" name="jumlah_tenaga_perempuan" placeholder="Jumlah Tenaga Kerja Perempuan" type="text" required="">
+                            <div class="validation-message" data-field="jumlah_tenaga_perempuan"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Jumlah Pengunjung Per Bulan</label>
+                            <input class="form-control" name="pengunjung_per_bulan" placeholder="Jumlah Pengunjung Per Bulan" type="text" required="">
+                            <div class="validation-message" data-field="pengunjung_per_bulan"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Fasilitas</label>
+                            <input class="form-control" name="fasilitas" placeholder="Fasilitas" type="text" required="">
+                            <div class="validation-message" data-field="fasilitas"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Standing</label>
+                            <input class="form-control" name="standing" placeholder="Standing" type="text" required="">
+                            <div class="validation-message" data-field="standing"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Standing Banner Informasi</label>
+                            <input class="form-control" name="standing_banner_informasi" placeholder="Standing Banner Informasi" type="text" required="">
+                            <div class="validation-message" data-field="standing_banner_informasi"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Menyetujui Melengkapi Kekurangan dari Standarisasi Usaha</label>
+                            <input class="form-control" name="persetujuan_melengkapi_kekurangan" placeholder="" type="text" required="">
+                            <div class="validation-message" data-field="persetujuan_melengkapi_kekurangan"></div>
+                    </div>
 
-                    
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Number of Rooms</label>
-                        <input type="number" class="form-control" name="jumlah_kamar" id="" placeholder="" min="1">
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Type of Rooms</label>
-                        <textarea class="form-control" rows="3" name="jenis_kamar"></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Facilities</label>
-                        <textarea class="form-control" rows="3" name="fasilitas"></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Number of Employees</label>
-                        <input type="number" class="form-control" name="jumlah_karyawan" id="" placeholder="" min="0">
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Length of Stay(± days)</label>
-                        <input type="number" class="form-control" name="lama_menginap" id="" placeholder="" min="1">
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Average Hotel Occupancy(%)</label>
-                        <input type="number" class="form-control" name="rata_ocupancy" id="" placeholder="" min="0">
-                    </div>
-                    <div class="mb-4">
-                        <label class="required fw-medium mb-2">Year of Founding</label>
-                        <input type="text" class="form-control" name="tahun_berdiri" id="" placeholder="">
-                    </div>
-                    
-                    <!-- <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                        <label class="form-check-label" for="flexCheckDefault">
-                            YES, I AUTHORIZE THE USE OF MY PERSONAL DATA IN ACCORDANCE WITH THE PRIVACY POLICY DESCRIBED ON THE WEBSITE.
-                        </label>
+                   <!--  <div class="mb-4">
+                            <label class="required fw-medium mb-2">Menyetujui Melengkapi Kekurangan dari Standarisasi Usaha kepariwisataan</label>
+                            <select name="persetujuan_melengkapi_kekurangan" class="form-control" required="">
+
+                        <option value="IYA">Administrasi</option>
+                        <option value="TIDAK">Kebersihan</option>
+                            
+            
+                            </select>
+                            <div class="validation-message" data-field="persetujuan_melengkapi_kekurangan"></div>
                     </div> -->
-                    <!-- Start Submit Button -->
-                    <button type="submit" class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4">
-                        <span>Send</span>
-                        <span class="vr"></span>
-                        <i class="fa-arrow-right fa-solid fs-14"></i>
-                    </button>
+
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Tanggal Pengisian</label>
+                            <input class="form-control" name="tanggal_pengisian" placeholder="" type="date" required="">
+                            <div class="validation-message" data-field="tanggal_pengisian"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2"> Tanda Tangan Pengisi</label><br>
+                            <input type="file" id="ttd_pengisi" name="ttd_pengisi" accept="image/png, image/jpeg" />
+
+                            <div class="validation-message" data-field="ttd_pengisi"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="required fw-medium mb-2">Telepon/WA Pengisi</label>
+                            <input class="form-control" name="telepon_pengisi" placeholder="Telepon Pengisi" type="text" required="">
+                            <div class="validation-message" data-field="telepon_pengisi"></div>
+                    </div>
+                    
+                    
+                    <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_hotel">Send</button>
                     </form>
+                    
                     <!-- /.End Submit Button -->
                 </div>
             </div>
         </div>
     </div>
 
-    
+<script src="<?=base_url()?>assets/plugins/jQuery/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+    $('#save_hotel').on("click", function() {
+        login();
+    });
+    $("#form-hotel").keypress(function(event) {
+        if (event.which == 13) {
+            login();
+        }
+    });
+
+    function login() {
+        $('#save_hotel').html("Authenticating...").attr('disabled', true);
+        var data = $('#form-hotel').serialize();
+        $.post("<?php echo base_url() . 'validate/validate_hotel'; ?>", data).done(function(data) {
+            if (data.status == "success") {
+                location.reload();
+            } else {
+                $('#save_hotel').html("Login").attr('disabled', false);
+                $('.validation-message').html('');
+                $('.validation-message').each(function() {
+                    for (var key in data) {
+                        if ($(this).attr('data-field') == key) {
+                            $(this).html(data[key]);
+                        }
+                    }
+                });
+            }
+        });
+    }
+</script>

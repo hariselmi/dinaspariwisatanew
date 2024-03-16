@@ -151,6 +151,13 @@ class Form extends CI_Controller {
 		$data['subview'] = 'form/pelabuhan';
 		$this->load->view('components/layout', $data);
 	}
+
+	public function gelper()
+	{
+		$data['title'] = 'Gelper';
+		$data['subview'] = 'form/gelper';
+		$this->load->view('components/layout', $data);
+	}
 	
 
 }

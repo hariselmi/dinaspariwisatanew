@@ -33,7 +33,7 @@
                 <!-- start button -->
                 <!-- end /. button -->
                 <!-- start button -->
-                <a href="sign-in.html" class="d-flex align-items-center justify-content-center p-0 btn-user" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Sign In">
+                <a href="<?=base_url()?>auth" class="d-flex align-items-center justify-content-center p-0 btn-user" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Sign In">
                     <i class="fa-solid fa-user-plus"></i>
                 </a>
                 <!-- end /. button -->
