@@ -595,7 +595,7 @@
                             <!-- end /. ratings counter text -->
                         </div>
                         <!-- start card title -->
-                        <h4 class="fs-5 fw-semibold mb-0">The Barber's Lounge</h4>
+                        <h4 class="fs-5 fw-semibold mb-0">1The Barber's Lounge</h4>
                         <!-- end /. card title -->
                     </div>
                 </div>
