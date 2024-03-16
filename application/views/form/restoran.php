@@ -180,7 +180,7 @@
             if (data.status == "success") {
                 location.reload();
             } else {
-                $('#save)hotel').html("Login").attr('disabled', false);
+                $('#save_restoran').html("Login").attr('disabled', false);
                 $('.validation-message').html('');
                 $('.validation-message').each(function() {
                     for (var key in data) {

@@ -141,7 +141,7 @@
     $('#save_salon_spa').on("click", function() {
         login();
     });
-    $("#form-hotel").keypress(function(event) {
+    $("#form-salon_spa").keypress(function(event) {
         if (event.which == 13) {
             login();
         }
@@ -149,8 +149,8 @@
 
     function login() {
         $('#save_salon_spa').html("Authenticating...").attr('disabled', true);
-        var data = $('#form-hotel').serialize();
-        $.post("<?php echo base_url() . 'validate/validate_hotel'; ?>", data).done(function(data) {
+        var data = $('#form-salon_spa').serialize();
+        $.post("<?php echo base_url() . 'validate/validate_salon_spa'; ?>", data).done(function(data) {
             if (data.status == "success") {
                 location.reload();
             } else {
