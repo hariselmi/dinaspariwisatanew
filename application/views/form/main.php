@@ -6,13 +6,13 @@
                     <!-- start section header -->
                     <div class="section-header text-center mb-5" data-aos="fade-down">
                         <!-- start subtitle -->
-                        <div class="d-inline-block font-caveat fs-1 fw-medium section-header__subtitle text-capitalize text-primary">Categories</div>
+                        <div class="d-inline-block font-caveat fs-1 fw-medium section-header__subtitle text-capitalize text-primary">Forms</div>
                         <!-- end /. subtitle -->
                         <!-- start title -->
-                        <h2 class="display-5 fw-semibold mb-3 section-header__title text-capitalize">Global Categories</h2>
+                        <h2 class="display-5 fw-semibold mb-3 section-header__title text-capitalize">Register</h2>
                         <!-- end /. title -->
                         <!-- start description -->
-                        <div class="sub-title fs-16">Discover exciting categories. <span class="text-primary fw-semibold">Find what you’re looking for.</span></div>
+                        <div class="sub-title fs-16">Fill out your business now. <span class="text-primary fw-semibold">Find what you’re looking for.</span></div>
                         <!-- end /. description -->
                     </div>
                     <!-- end /. section header -->

@@ -2,14 +2,19 @@
 
 
 
+     <form id="form-hotel">
     <div class="py-5 bg-light mx-3 rounded-4 my-3">
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-5">
-                    <form id="form-gelper">
+                    
                     <input hidden type="text" name="id" class="hidden">
-                    <h3 class="h1 mb-4 font-caveat text-primary">Gelper</h3>
-                    <!-- Start Form Group -->
+                    <h3 class="h1 mb-4 font-caveat text-primary">Salon & Spa</h3>
+                   
+</div></div>
+
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-5">
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Nama Usaha</label>
                             <input class="form-control" name="nama_usaha" placeholder="Nama Usaha" type="text" required="">
@@ -65,11 +70,6 @@
                             <input class="form-control" name="jumlah_tenaga_perempuan" placeholder="Jumlah Tenaga Kerja Perempuan" type="text" required="">
                             <div class="validation-message" data-field="jumlah_tenaga_perempuan"></div>
                     </div>
-                    
-                </div>
-<!-------------------------------------------------------------------------------------------- -->
-                <div class="col-md-6 col-xl-5">
-<br>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Standing Banner Informasi</label>
                             <input class="form-control" name="standing_banner_informasi" placeholder="Standing Banner Informasi" type="text" required="">
@@ -80,6 +80,11 @@
                             <input class="form-control" name="standing_banner_bebas_asap_rokoks" placeholder="Standing Banner/Spanduk Area Bebas Asap Rokok" type="text" required="">
                             <div class="validation-message" data-field="standing_banner_bebas_asap_rokoks"></div>
                     </div>
+                </div>
+<!-------------------------------------------------------------------------------------------- -->
+            <div class="col-md-6 col-xl-5">
+
+                    
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Apar(Alat Pemadam Api Ringan)</label>
                             <input class="form-control" name="apar" placeholder="Apar(Alat Pemadam Api Ringan)" type="text" required="">
@@ -144,15 +149,27 @@
                             <input class="form-control" name="telepon_pengisi" placeholder="Telepon Pengisi" type="text" required="">
                             <div class="validation-message" data-field="telepon_pengisi"></div>
                     </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Latitude</label>
+                            <input class="form-control" name="latitude" placeholder="Ex: 1.054507" type="text">
+                            <div class="validation-message" data-field="latitude"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Longitude</label>
+                            <input class="form-control" name="longitude" placeholder="Ex: 104.004120" type="text">
+                            <div class="validation-message" data-field="longitude"></div>
+                    </div>
+                    
                     
                     
                     <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_gelper">Send</button>
-                    </form>
+                  
                     
                     <!-- /.End Submit Button -->
                 </div>
             </div>
         </div>
+        </form>
     </div>
 
 <script src="<?=base_url()?>assets/plugins/jQuery/jquery.min.js"></script>

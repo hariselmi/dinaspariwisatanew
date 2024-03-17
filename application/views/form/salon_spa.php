@@ -1,15 +1,17 @@
 
-
-
-
+   <form id="form-hotel">
     <div class="py-5 bg-light mx-3 rounded-4 my-3">
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-5">
-                    <form id="form-salon_spa">
+                    
                     <input hidden type="text" name="id" class="hidden">
                     <h3 class="h1 mb-4 font-caveat text-primary">Salon & Spa</h3>
-                    <!-- Start Form Group -->
+                   
+</div></div>
+
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-5">
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Nama Usaha</label>
                             <input class="form-control" name="nama_usaha" placeholder="Nama Usaha" type="text" required="">
@@ -55,10 +57,6 @@
                             <input class="form-control" name="jumlah_tenaga_perempuan" placeholder="Jumlah Tenaga Kerja Perempuan" type="text" required="">
                             <div class="validation-message" data-field="jumlah_tenaga_perempuan"></div>
                     </div>
-                </div>
-<!-------------------------------------------------------------------------------------------- -->
-                <div class="col-md-6 col-xl-5">
-<br>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Brosur SPA / Massage / Panti Pijat</label>
                             <input class="form-control" name="brosur_spa_massage" placeholder="Brosur SPA / Massage / Panti Pijat" type="text" required="">
@@ -69,6 +67,12 @@
                             <input class="form-control" name="jumlah_terapis_sertifikasi" placeholder="Terapis yang Memiliki Sertifikasi" type="text" required="">
                             <div class="validation-message" data-field="jumlah_terapis_sertifikasi"></div>
                     </div>
+                </div>
+<!-------------------------------------------------------------------------------------------- -->
+                <div class="col-md-6 col-xl-5">
+
+                    
+                    
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Jumlah Pengunjung Per Bulan</label>
                             <input class="form-control" name="pengunjung_per_bulan" placeholder="Jumlah Pengunjung Per Bulan" type="text" required="">
@@ -123,15 +127,27 @@
                             <input class="form-control" name="telepon_pengisi" placeholder="Telepon Pengisi" type="text" required="">
                             <div class="validation-message" data-field="telepon_pengisi"></div>
                     </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Latitude</label>
+                            <input class="form-control" name="latitude" placeholder="Ex: 1.054507" type="text">
+                            <div class="validation-message" data-field="latitude"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Longitude</label>
+                            <input class="form-control" name="longitude" placeholder="Ex: 104.004120" type="text">
+                            <div class="validation-message" data-field="longitude"></div>
+                    </div>
+                    
                     
                     
                     <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_salon_spa">Send</button>
-                    </form>
+                    
                     
                     <!-- /.End Submit Button -->
                 </div>
             </div>
         </div>
+        </form>
     </div>
 
 <script src="<?=base_url()?>assets/plugins/jQuery/jquery.min.js"></script>

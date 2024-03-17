@@ -2,13 +2,19 @@
 
 
 
+   <form id="form-hotel">
     <div class="py-5 bg-light mx-3 rounded-4 my-3">
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-md-6 col-xl-5">
-                    <form id="form-restoran">
+                    
                     <input hidden type="text" name="id" class="hidden">
                     <h3 class="h1 mb-4 font-caveat text-primary">Restoran</h3>
+                   
+</div></div>
+
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-5">
                     <!-- Start Form Group -->
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Nama Usaha</label>
@@ -70,11 +76,6 @@
                             <input class="form-control" name="jumlah_tenaga_laki_laki" placeholder="Jumlah Tenaga Kerja Laki-Laki" type="text" required="">
                             <div class="validation-message" data-field="jumlah_tenaga_laki_laki"></div>
                     </div>
-                </div>
-<!-------------------------------------------------------------------------------------------- -->
-                <div class="col-md-6 col-xl-5">
-<br>
-                    
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Jumlah Tenaga Kerja Perempuan</label>
                             <input class="form-control" name="jumlah_tenaga_perempuan" placeholder="Jumlah Tenaga Kerja Perempuan" type="text" required="">
@@ -85,6 +86,13 @@
                             <input class="form-control" name="ragam_menu" placeholder="Ragam Menu yang Disajikan" type="text" required="">
                             <div class="validation-message" data-field="ragam_menu"></div>
                     </div>
+                </div>
+<!-------------------------------------------------------------------------------------------- -->
+                <div class="col-md-6 col-xl-5">
+
+                    
+                    
+                    
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Jumlah Pengunjung Per Bulan</label>
                             <input class="form-control" name="pengunjung_per_bulan" placeholder="Jumlah Pengunjung Per Bulan" type="text" required="">
@@ -149,15 +157,26 @@
                             <input class="form-control" name="telepon_pengisi" placeholder="Telepon Pengisi" type="text" required="">
                             <div class="validation-message" data-field="telepon_pengisi"></div>
                     </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Latitude</label>
+                            <input class="form-control" name="latitude" placeholder="Ex: 1.054507" type="text">
+                            <div class="validation-message" data-field="latitude"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Longitude</label>
+                            <input class="form-control" name="longitude" placeholder="Ex: 104.004120" type="text">
+                            <div class="validation-message" data-field="longitude"></div>
+                    </div>
                     
                     
                     <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_restoran">Send</button>
-                    </form>
+                   
                     
                     <!-- /.End Submit Button -->
                 </div>
             </div>
         </div>
+    </form>
     </div>
 
 <script src="<?=base_url()?>assets/plugins/jQuery/jquery.min.js"></script>

@@ -19,6 +19,8 @@
     <link href="<?=base_url()?>assets/plugins/select2-bootstrap-5/select2-bootstrap-5-theme.min.css" rel="stylesheet">
     <!-- Custom style for this template -->
     <link href="<?=base_url()?>assets/css/style.css" rel="stylesheet">
+    <link href="<?=base_url()?>assets/css/custom.css" rel="stylesheet">
+
 </head>
 
 <body>
