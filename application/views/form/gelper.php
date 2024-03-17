@@ -9,7 +9,7 @@
                 <div class="col-md-6 col-xl-5">
                     
                     <input hidden type="text" name="id" class="hidden">
-                    <h3 class="h1 mb-4 font-caveat text-primary">Salon & Spa</h3>
+                    <h3 class="h1 mb-4 font-caveat text-primary">Gelper</h3>
                    
 </div></div>
 
@@ -77,8 +77,8 @@
                     </div>
                     <div class="mb-4">
                             <label class="required fw-medium mb-2">Standing Banner/Spanduk Area Bebas Asap Rokok</label>
-                            <input class="form-control" name="standing_banner_bebas_asap_rokoks" placeholder="Standing Banner/Spanduk Area Bebas Asap Rokok" type="text" required="">
-                            <div class="validation-message" data-field="standing_banner_bebas_asap_rokoks"></div>
+                            <input class="form-control" name="standing_banner_bebas_asap_rokok" placeholder="Standing Banner/Spanduk Area Bebas Asap Rokok" type="text" required="">
+                            <div class="validation-message" data-field="standing_banner_bebas_asap_rokok"></div>
                     </div>
                 </div>
 <!-------------------------------------------------------------------------------------------- -->

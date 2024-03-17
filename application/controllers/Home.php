@@ -61,6 +61,33 @@ class Home extends CI_Controller {
 		$data['subview'] = 'home/contact';
 		$this->load->view('components/layout', $data);
 	}
+
+	public function search()
+	{
+		$data['title'] = 'Home';
+		$data['subview'] = 'home/search';
+		$this->load->view('components/layout', $data);
+	}
+
+	public function testing()
+	{
+		$no_pendaftaran_asli = 'HTL2024030009';
+		$no_pendaftaran = substr($no_pendaftaran_asli, 0, 3) ;
+
+
+		$nama_table = $this->db->query("SELECT * FROM category WHERE singkatan = '$no_pendaftaran'")->row();
+		$tabel_pencarian = $nama_table->tabel_formulir;
+
+
+		$query = $this->db->query("SELECT * FROM $tabel_pencarian WHERE nomor_pendaftaran = '$no_pendaftaran_asli'");
+		if ($query->num_rows() > 0) {
+			$nama_usaha = $query->row()->nama_usaha;
+		}
+		else {
+			$nama_usaha = 'Data Tidak Ditemukan';
+		}
+		echo $nama_usaha;
+	}
 	
 
 }

@@ -4,6 +4,7 @@ $lang['menu_2'] 								= '범주';
 $lang['menu_3'] 								= '지도';
 $lang['menu_4'] 								= '연락하다';
 $lang['menu_5'] 								= '자가 등록';
+$lang['menu_6'] 								= '찾다';
 
 $lang['place'] 									= '장소';
 $lang['categories'] 							= '카테고리';

@@ -128,7 +128,16 @@
                             <input class="form-control" name="telepon_pengisi" placeholder="Telepon Pengisi" type="text" required="">
                             <div class="validation-message" data-field="telepon_pengisi"></div>
                     </div>
-                    
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Latitude</label>
+                            <input class="form-control" name="latitude" placeholder="Ex: 1.054507" type="text">
+                            <div class="validation-message" data-field="latitude"></div>
+                    </div>
+                    <div class="mb-4">
+                            <label class="fw-medium mb-2">Longitude</label>
+                            <input class="form-control" name="longitude" placeholder="Ex: 104.004120" type="text">
+                            <div class="validation-message" data-field="longitude"></div>
+                    </div>
                     
                     <button class="btn btn-primary btn-lg d-inline-flex hstack gap-2 mt-4 action" title="save" id="save_hotel">Send</button>
                     

@@ -4,6 +4,7 @@ $lang['menu_2'] 								= 'Category';
 $lang['menu_3'] 								= 'Maps';
 $lang['menu_4'] 								= 'Contact';
 $lang['menu_5'] 								= 'Form Registration';
+$lang['menu_6'] 								= 'Search';
 
 $lang['place'] 									= 'Places';
 $lang['categories'] 							= 'Categories';

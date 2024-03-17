@@ -88,6 +88,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?=base_url()?>form"><?=$this->lang->line('menu_5')?></a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?=base_url()?>form"><?=$this->lang->line('menu_6')?></a>
+                    </li>
 
 
                 </ul>
